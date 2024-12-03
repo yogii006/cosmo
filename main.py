@@ -7,15 +7,14 @@ from bson import ObjectId
 from database import db
 
 app = FastAPI()
-
+import os
 @app.get("/")
 def read_root():
-    return {"message": "Hello, Render!"}
+    return {"message": "Server is running!"}
 
 if __name__ == "__main__":
-    # Bind to the port specified in the environment variable
-    port = int(os.getenv("PORT", 8000))  # Default to 8000 if PORT is not set
-    uvicorn.run(app, host="0.0.0.0", port=port)
+    port = int(os.getenv("PORT", 8000))  # Use the PORT environment variable or default to 8000
+    app.run(host="0.0.0.0", port=port)
 
 class AddressModel(BaseModel):
     city: str
