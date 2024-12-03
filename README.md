@@ -11,8 +11,8 @@ This is a **FastAPI** application deployed on **Render**. The deployment is conf
 
 1. **Clone the repository:**
    ```bash
-   git clone <repository-url>
-   cd <repository-directory>
+   git clone https://github.com/yogii006/cosmo
+   cd cosmo
    ```
 
 2. **Create a virtual environment:**
@@ -115,12 +115,12 @@ Ensure no runtime errors exist. Test locally before deployment.
 
 After deployment, the application can be accessed via the **Base URL** provided by Render. For example:
 ```plaintext
-https://<your-app-name>.onrender.com
+https://cosmo-l3uj.onrender.com/
 ```
 
 Endpoints:
 - **Health Check:** `GET /`
-- **API Endpoints:** `<Base URL>/api/<endpoint-name>`
+- **API Endpoints:** `<Base URL>/<endpoint-name>`
 
 ---
 
